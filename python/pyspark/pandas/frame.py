@@ -11534,7 +11534,7 @@ defaultdict(<class 'list'>, {'col..., 'col...})]
         axis: Axis = "index",
         inplace: bool = False,
         level: Optional[int] = None,
-        errors: str = "ignore",
+        errors: str = "raise",
     ) -> Optional["DataFrame"]:
         """
         Alter axes labels.
@@ -11558,7 +11558,7 @@ defaultdict(<class 'list'>, {'col..., 'col...})]
             Whether to return a new DataFrame.
         level : int or level name, default None
             In case of a MultiIndex, only rename labels in the specified level.
-        errors : {'ignore', 'raise'}, default 'ignore'
+        errors : {'ignore', 'raise'}, default 'raise'
             If 'raise', raise a `KeyError` when a dict-like `mapper`, `index`, or `columns`
             contains labels that are not present in the Index being transformed. If 'ignore',
             existing keys will be renamed, and extra keys will be ignored.
